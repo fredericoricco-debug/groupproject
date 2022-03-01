@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-i5&xqmnq2s06i4+6nkh6_t(6dl4sad$-nnzzr1+01#@f3nw(5t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['ctf-group-project.nw.r.appspot.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -72,6 +71,35 @@ WSGI_APPLICATION = 'flags.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# [START db_setup]
+# if os.getenv('GAE_APPLICATION', None):
+    # Running on production App Engine, so connect to Google Cloud SQL using
+    # the unix socket at /cloudsql/<your-cloudsql-connection string>
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'HOST': '/cloudsql/ctf-group-project:europe-west2:flags-instance',
+#             'USER': 'root',
+#             'PASSWORD': 'root',
+#             'NAME': 'flags',
+#         }
+#     }
+# else:
+#     # Running locally so connect to either a local MySQL instance or connect
+#     # to Cloud SQL via the proxy.  To start the proxy via command line:
+#     #    $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
+#     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'HOST': '127.0.0.1',
+#             'PORT': '1433',
+#             'NAME': 'flags',
+#             'USER': 'root',
+#             'PASSWORD': 'root',
+#         }
+#     }
+# [END db_setup]
 
 DATABASES = {
     'default': {
@@ -116,6 +144,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
