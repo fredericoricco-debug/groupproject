@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Flags</title>
+    <!--    Bootstap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!--    Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <meta name="viewport" contenat="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+  </head>
+<body class="text-center">
+    <form class="form-register" action="/register" method="post">
+      {% csrf_token %}
+      <h1 class="h1">Flags</h1>
+      <br>
+      <h1 class="h3 mb-3 font-weight-normal">Register today</h1>
+      <label for="inputUsername" class="sr-only">Username</label>
+      <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input name="password1" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <label for="inputConfirmPassword" class="sr-only">Confirm password</label>
+      <input name= password2 type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm password" required>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    </form>
+  </body>
+
+</html>
