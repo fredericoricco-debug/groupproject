@@ -16,6 +16,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
+
   </head>
 <body class="text-center">
     <div class="outer-flex">
@@ -38,6 +39,87 @@
 
       <div class="home-content">
         <h1>Map</h1>
+        <br>
+<!--        <iframe class="home-map" width="600" height="450" style="border:0" loading="lazy" allowfullscreen-->
+<!--                src="https://www.google.com/maps/embed/v1/view?zoom=16&center=50.7371%2C-3.5351&key=AIzaSyBbN1Zdz9LktJuPSF-ZioLqxW-P2dM_qFg">-->
+<!--        </iframe>-->
+        <div id="home-map" class="home-map"></div>
+
+        <script>
+          function initMap() {
+          let exeter = {lat: 50.738, lng: -3.532};
+          let map = new google.maps.Map(
+            document.getElementById("home-map"), {
+              zoom: 14,
+              center: exeter,
+              minZoom: 16,
+              draggable: false,
+              mapTypeId:google.maps.MapTypeId.SATELLITE,
+              mapTypeControl: false,
+              streetViewControl: false,
+              zoomControl: false,
+              rotateControlOptions: false,
+              });
+
+          var customStyled = [
+            {
+              featureType: "all",
+              elementType: "labels",
+              stylers: [
+                { visibility: "off" }
+              ]
+            }
+          ]
+          map.set('styles',customStyled);
+
+          const svgMarker = {
+          path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+          fillColor: "red",
+          fillOpacity: 0.85,
+          strokeWeight: 0,
+          rotation: 0,
+          scale: 2
+           };
+
+          const flagMarkerRed = {
+          path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+          fillColor: "red",
+          fillOpacity: 0.7,
+          strokeWeight: 1,
+          strokeColor: "white",
+          rotation: 0,
+          scale: 6,
+           };
+
+           const flagMarkerGreen = {
+          path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+          fillColor: "green",
+          fillOpacity: 0.7,
+          strokeWeight: 1,
+          strokeColor: "white",
+          rotation: 0,
+          scale: 6,
+           };
+
+          let pos1 = {lat: 50.73838, lng: -3.53586};
+          let pos2 = {lat: 50.73807, lng: -3.53066};
+          let pos3 = {lat: 50.737, lng: -3.532};
+          let pos4 = {lat: 50.738, lng: -3.533};
+          let pos5 = {lat: 50.737, lng: -3.533};
+          let pos6 = {lat: 50.737, lng: -3.528};
+
+          let marker1 = new google.maps.Marker({position: pos1, map: map, icon: flagMarkerRed});
+          let marker2 = new google.maps.Marker({position: pos2, map: map, icon: flagMarkerRed});
+          let marker3 = new google.maps.Marker({position: pos3, map: map, icon: flagMarkerGreen});
+          let marker4 = new google.maps.Marker({position: pos4, map: map, icon: flagMarkerGreen});
+          let marker5 = new google.maps.Marker({position: pos5, map: map, icon: flagMarkerRed});
+          let marker6 = new google.maps.Marker({position: pos6, map: map, icon: flagMarkerGreen});
+          }
+        </script>
+
+<!--        <script src="https://www.google.com/maps/embed/v1/view?zoom=16&key=AIzaSyBbN1Zdz9LktJuPSF-ZioLqxW-P2dM_qFg"></script>-->
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbN1Zdz9LktJuPSF-ZioLqxW-P2dM_qFg&callback=initMap"></script>
       </div>
 
       <footer class="mastfoot">

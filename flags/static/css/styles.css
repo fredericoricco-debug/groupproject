@@ -56,13 +56,26 @@ div.outer-flex {
 /* HOMEPAGE */
 .home-content {
   height: 70%;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.home-map {
+  border-radius: 10px;
+  height: 73%;
+  width: 60%;
+  border: 1px;
 }
 
 /*
 * Header
 */
 header {
-  width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
