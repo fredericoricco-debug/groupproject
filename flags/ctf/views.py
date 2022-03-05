@@ -53,3 +53,13 @@ def signout(request):
     logout(request)
     messages.info(request, "You have succesfully logged out.")
     return redirect("signin")
+
+
+@login_required(login_url='signin')
+def leaderboard(request):
+    return render(request, 'leaderboard.html')
+
+
+@login_required(login_url='signin')
+def scan(request):
+    return render(request, 'scan.html')

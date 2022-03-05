@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Flags</title>
+    <!--    Bootstap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!--    Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+
+  </head>
+<body class="text-center">
+    <div class="outer-flex">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="/">Flags</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="leaderboard">Leaderboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="signout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="home-content">
+        <br>
+<!--        <iframe class="home-map" width="600" height="450" style="border:0" loading="lazy" allowfullscreen-->
+<!--                src="https://www.google.com/maps/embed/v1/view?zoom=16&center=50.7371%2C-3.5351&key=AIzaSyBbN1Zdz9LktJuPSF-ZioLqxW-P2dM_qFg">-->
+<!--        </iframe>-->
+
+        </script>
+
+<!--        <script src="https://www.google.com/maps/embed/v1/view?zoom=16&key=AIzaSyBbN1Zdz9LktJuPSF-ZioLqxW-P2dM_qFg"></script>-->
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbN1Zdz9LktJuPSF-ZioLqxW-P2dM_qFg&callback=initMap"></script>
+
+          <h1>Leaderboard</h1>
+          <br>
+
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User</th>
+      <th scope="col">Flags</th>
+      <th scope="col">Occupation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>dingle82 [GRP8]</td>
+      <td>3</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>maxsatch [GRP8]</td>
+      <td>2</td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>dwanynej99</td>
+      <td>1</td>
+      <td>16%</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <footer class="mastfoot">
+        <div class="inner">
+          <p>Group project</p>
+        </div>
+      </footer>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+    </div>
+</body>
+
+</html>

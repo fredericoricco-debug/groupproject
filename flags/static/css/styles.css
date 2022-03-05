@@ -124,3 +124,16 @@ div.login-fields-container{
     height: 90px;
     justify-content: space-between;
 }
+
+/* SCAN PAGE */
+.scan-main-div {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.scan-main-div p {
+  display: block;
+  padding: 10px;
+}

@@ -27,7 +27,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Leaderboard</a>
+                <a class="nav-link" href="leaderboard">Leaderboard</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="signout">Logout</a>
@@ -114,6 +114,11 @@
           let marker4 = new google.maps.Marker({position: pos4, map: map, icon: flagMarkerGreen});
           let marker5 = new google.maps.Marker({position: pos5, map: map, icon: flagMarkerRed});
           let marker6 = new google.maps.Marker({position: pos6, map: map, icon: flagMarkerGreen});
+
+          google.maps.event.addListener(marker1, 'click', function() {
+            window.location.href = 'scan';
+          });
+
           }
         </script>
 
